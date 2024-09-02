@@ -6,15 +6,13 @@ import eel
 from engine.command import speak
 from engine.config import *
 import pywhatkit as kit
-=======
-from playsound import playsound
-import eel
->>>>>>> 0a3d1be499a4b28efc66d030454ef74b5d769deb
+
+
 
 # playing assistant sound function 
 @eel.expose
 def playAssistantSound():
-<<<<<<< HEAD
+
     music_dir = "www/assets/audio/start_sound.mp3"
     playsound(music_dir)
 
@@ -52,8 +50,4 @@ def extract_yt_term(command):
 
 
 
-=======
-    music_dir = "www\\assets\\audio\\start_sound.mp3"
-    playsound(music_dir)
 
->>>>>>> 0a3d1be499a4b28efc66d030454ef74b5d769deb
