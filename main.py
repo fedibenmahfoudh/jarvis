@@ -1,14 +1,10 @@
 import os
 import eel
 from engine.features import *
-<<<<<<< HEAD
 from engine.command import *
 
 eel.init('www')
 playAssistantSound()
-
-
-
 
 eel.start('index.html')  # Or whichever file is your main HTML file
 

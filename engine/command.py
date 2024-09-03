@@ -1,8 +1,8 @@
-<<<<<<< HEAD
 import pyttsx3
 import speech_recognition as sr
 import eel
 import time
+
 def speak(text):
   engine = pyttsx3.init()
 
@@ -13,6 +13,7 @@ def speak(text):
   eel.DisplayMessage(text)
   engine.say(text)
   engine.runAndWait()
+
 @eel.expose
 def takeCommand():
   r = sr.Recognizer()
@@ -36,13 +37,16 @@ def takeCommand():
     return ""
   
   return query.lower()
+
 @eel.expose
 def allCommands():
   query=takeCommand()
   print(query)
+
   if "open" in query:
     from engine.features import openCommand
     openCommand(query)
+    
   elif " play on youtube":
     from engine.features import playYoutube
     playYoutube(query)

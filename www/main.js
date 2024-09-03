@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 $(document).ready(function () {
   $(".text").textillate({
     loop: true,

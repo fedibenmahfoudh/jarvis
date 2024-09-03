@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import os
 import re
 from playsound import playsound
