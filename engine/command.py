@@ -28,7 +28,7 @@ def takeCommand():
   try:
     print('Recognizing')
     eel.DisplayMessage('Recognizing.....')
-    query = r.recognize_google(audio_data=audio,language='en-in')
+    query = r.recognize_google(audio_data=audio,language='en-GB')
     print(f"user said :{query}")
     eel.DisplayMessage(query)
     time.sleep(2)
