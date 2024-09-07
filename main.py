@@ -2,12 +2,14 @@ import os
 import eel
 from engine.features import *
 
-eel.init("www")
-playAssistantSound()
+from engine.command import *
+def start():
+    eel.init('www')
+    playAssistantSound()
 
-os.system('start chrome.exe --app="http://localhost:8000/index.html"')
-eel.start('index.html',mode=None,host='localhost',block=True) 
 
-""" hetha el code eli majoud fel vidéo """
-# os.system('start msedge.exe --app="http://localhost:8000/index.html"')
-# eel.start('index.html', mode=None, host='localhost', block=True)
+    eel.start('index.html')
+
+# eel.start('index.html',host='localhost',block="True")  # Or whichever file is your main HTML file
+# os.system('start chrome.exe --app="http://127.0.0.1:8000/index.html"')
+# eel.start('index.html',mode=None,host='localhost',block=True) 

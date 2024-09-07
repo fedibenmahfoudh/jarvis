@@ -1,5 +1,6 @@
 body {
-  background-color: black;
+ 
+  background-color: #000000;
   overflow-y: hidden;
   overflow-x: hidden;
 }
@@ -12,6 +13,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 
 .square span:nth-child(1) {
   position: absolute;
@@ -82,8 +84,7 @@ body {
 #TextInput {
   background-color: #181818a8;
   border-color: blue;
-  box-shadow: 0 0 20px rgb(25, 0, 255),
-    inset 0 0 0px rgb(25, 0, 255);
+  
   border-radius: 8px;
   color: white;
   padding: 3px 0px 3px 20px;
@@ -96,7 +97,7 @@ body {
   width: 95%;
   outline: none;
   color: white;
-  font-family: cursive;
+  
 }
 
 
@@ -117,7 +118,7 @@ body {
 
 .glow-on-hover:before {
   content: '';
-  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  background: linear-gradient(45deg,#002bff, #7a00ff);
   position: absolute;
   top: -2px;
   left: -2px;
@@ -170,3 +171,29 @@ body {
   }
 }
 /* Input Filed End*/
+/* chat log*/
+.offcanvas{
+  background-color: #313131;
+  
+}
+.reciever_message{
+  padding: 8px;
+  border: 1px solid rgb(0, 139, 139);
+  border-radius: 0px 15px 15px 20px;
+  width: auto;
+  color: white;
+  background-color: #3f12b3;
+}
+
+.sender_message{
+  padding: 8px;
+  border: 1px solid #3f12b3;
+  border-radius: 15px 15px 0px 20px;
+  width: auto;
+  color: white;
+  background-color: #029765;
+}
+.width-size{
+max-width: 80%;
+width: auto;
+}

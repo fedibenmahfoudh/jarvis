@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jarvis</title>
-    <link rel="shortcut icon " href="/assets/img/icons8-bixby-100.png" />
+    <title>Alpha</title>
+   <link rel="shortcut icon" href="assets/img/cpuwhite.png" type="png/x-icon">
     <!-- Bootsrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -32,32 +33,30 @@
     <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body>
-    <div class="container">
+  <body >
+    <div class="container ">
       <!-- to see the waves you have to add the world "hidden" to the parameters of section and vise versa-->
-      <section id="Oval" class="mb-4">
+      <section id="Oval" class="mb-4" >
         <div class="row">
           <div class="col-md-1"></div>
           <div class="col-md-10">
             <div
               class="d-flex justify-content-center align-items-center"
-              style="height: 80vh"
+              style="height: 70vh"
             >
-              <canvas
-                id="canvasOne"
-                width="700"
+           <video
+           autoplay
+           loop
+           muted
+           width="700"
                 height="420"
-                style="position: absolute"
-              ></canvas>
-              <div id="JarvisHood">
-                <div class="square">
-                  <span class="circle"></span>
-                  <span class="circle"></span>
-                  <span class="circle"></span>
-                </div>
-              </div>
+                style="position: absolute">
+              <source src="assets/video/vid1.mp4" type="video/mp4">>
+            </video>
+              
+              
             </div>
-            <h5 class="text-light text text-center">Ask Me Anything</h5>
+            <h5 class="text-light text-center">How can I help you today</h5>
 
             <!-- create the input -->
             <div class="col-md-12 mt-4 pt-4">
@@ -68,12 +67,13 @@
                     class="input-field"
                     id="chatbox"
                     name="chatbox"
-                    placeholder="type here ........."
+                    placeholder="Type here ..."
                   />
+                 
                   <button id="MicBtn" class="glow-on-hover">
                     <i class="bi bi-mic"></i>
                   </button>
-                  <button id="ChatBtn" class="glow-on-hover">
+                  <button id="ChatBtn" class="glow-on-hover" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                     <i class="bi bi-chat-dots"></i>
                   </button>
                   <button id="SttingBtn" class="glow-on-hover">
@@ -97,7 +97,7 @@
               >
                 <div class="">
                   <p class="text-start text-light mb-4 siri-message">
-                    oumayma , jawher and fedi are the owners of this project
+                    How can I help You
                   </p>
                   <div id="siri-container"></div>
                 </div>
@@ -107,7 +107,32 @@
         </div>
       </section>
     </div>
+    <div class="d-flex">
+      
+     
+      <img src="assets/img/cpuwhite.png" style="position: relative; bottom: -23px; " width="80"
+    height="40"
+     
+   alt="">
+   <img src="assets/img/cpu_white_full.png" style="position: relative; bottom: -20px;" width="80"
+    height="40" alt="">
+   <img src="assets/video/image_processing20221117-12528-1ow6pi4.gif" width="90" style="position: relative; bottom: -15px; left: -10px;" height="50" alt="">
+ 
 
+    
+  
+    </div>
+    
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 id="offcanvasRightLabel" class="text-white offcanvas-title">Chats</h5>
+  </div>
+  <div class="offcanvas-body" id="offcanvas-body">
+    
+  </div>
+</div>
+    
     <!--Jquery  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
@@ -133,8 +158,10 @@
     <script src="assets/vendore/texllate/jquery.lettering.js"></script>
 
     <script src="main.js"></script>
-    <script src="/eel.js"></script>
+    <script type="text/javascript" src="/eel.js"></script>
+    <script src="controller.js"></script>
     <!-- Eel enables you to develop the frontend of your application using web technologies 
       (HTML, CSS, JavaScript) while using Python for backend logic.-->
   </body>
 </html>
+
