@@ -1,34 +1,30 @@
-
+<<<<<<< HEAD
 import csv
-
+=======
+>>>>>>> 2631f5274412d3d2bba252a17a7e07e588b3c3b9
 import sqlite3
 
 #crete jarvis.db file jus run the command
-conn = sqlite3.connect("Alpha.db")
+conn = sqlite3.connect("jarvis.db")
 cursor = conn.cursor()
-# query = "DELETE FROM sys_command where name=='brave'"
-query = "INSERT INTO sys_command VALUES (null,'brave', 'C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave')"
+
+query = "CREATE TABLE IF NOT EXISTS sys_command(id integer primary key, name VARCHAR(100), path VARCHAR(1000))"
 cursor.execute(query)
-conn.commit()
 
+""" query = "INSERT INTO sys_command VALUES (null,'brave', 'C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave')"
+cursor.execute(query)
+conn.commit() """
 
-# query = "CREATE TABLE IF NOT EXISTS sys_command(id integer primary key, name VARCHAR(100), path VARCHAR(1000))"
-# cursor.execute(query)
+query = "CREATE TABLE IF NOT EXISTS web_command(id integer primary key, name VARCHAR(100), url VARCHAR(1000))"
+cursor.execute(query)
 
-# query = "INSERT INTO sys_command VALUES (null,'brave', 'C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave')"
-# cursor.execute(query)
-# conn.commit()
-
-# query = "CREATE TABLE IF NOT EXISTS web_command(id integer primary key, name VARCHAR(100), url VARCHAR(1000))"
-# cursor.execute(query)
-
-
+<<<<<<< HEAD
 # query = "INSERT INTO web_command VALUES (null,'chat gpt', 'https://chatgpt.com/')"
 # cursor.execute(query)
 # conn.commit()
 
-# # Create a table with the desired columns
-# cursor.execute('''CREATE TABLE IF NOT EXISTS contacts (id integer primary key, name VARCHAR(200), mobile_no VARCHAR(255), email VARCHAR(255) NULL)''')
+# Create a table with the desired columns
+cursor.execute('''CREATE TABLE IF NOT EXISTS contacts (id integer primary key, name VARCHAR(200), mobile_no VARCHAR(255), email VARCHAR(255) NULL)''')
 
 
 # # Specify the column indices you want to import (0-based index)
@@ -44,13 +40,10 @@ conn.commit()
 
 # # Commit changes and close connection
 # conn.commit()
+# conn.close()
 
 
-
-# query = "INSERT INTO contacts VALUES (null,'Aya','+21629661996',null)"
-# query = "INSERT INTO contacts VALUES (null,'skan','+21629661996',null)"
-# query = "INSERT INTO contacts VALUES (null,'fedi','+21629661996',null)"
-
+# query = "INSERT INTO contacts VALUES (null,'Aya Hosni', '+21629661996',null)"
 # cursor.execute(query)
 # conn.commit()
 
@@ -64,9 +57,10 @@ conn.commit()
 # cursor.execute("SELECT mobile_no FROM contacts WHERE LOWER(name) LIKE ? OR LOWER(name) LIKE ?", ('%' + query + '%', query + '%'))
 # results = cursor.fetchall()
 # print(results[0][0])
+=======
+query = "INSERT INTO web_command VALUES (null,'chat gpt', 'https://chatgpt.com/')"
+cursor.execute(query)
+conn.commit()
 
-# query = "INSERT INTO web_command VALUES (null,'chat gpt', 'https://chatgpt.com/')"
-# cursor.execute(query)
-# conn.commit()
-# conn.close()
 
+>>>>>>> 2631f5274412d3d2bba252a17a7e07e588b3c3b9

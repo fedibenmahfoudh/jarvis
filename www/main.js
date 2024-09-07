@@ -1,4 +1,5 @@
 
+
 $(document).ready(function () {
   $(".text").textillate({
     loop: true,
@@ -37,6 +38,8 @@ $(document).ready(function () {
   });
 
   //Mic button click event
+  $("#MicBtn").click(function () {
+    eel.playAssistantSound()
   $("#MicBtn").click(function () {
     eel.playAssistantSound()
     $("#Oval").attr("hidden", true);

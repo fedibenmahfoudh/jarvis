@@ -10,15 +10,18 @@ def speak(text):
   engine.setProperty('voice', voices[1].id)   #changing index, changes voices. 1 for female 2 For male
   engine.setProperty('rate', 174)     # setting up new voice rate(voice speed)
   eel.DisplayMessage(text)
+  eel.DisplayMessage(text)
   engine.say(text)
   eel.recieverText(text)
   engine.runAndWait()
 
 @eel.expose
+@eel.expose
 def takeCommand():
   r = sr.Recognizer()
   with sr.Microphone() as source :
     print('listening.....')
+    eel.DisplayMessage('listening.....')
     eel.DisplayMessage('listening.....')
     r.pause_threshold = 1
     r.adjust_for_ambient_noise(source)
@@ -29,7 +32,12 @@ def takeCommand():
     print('Recognizing')
     eel.DisplayMessage('Recognizing.....')
     query = r.recognize_google(audio_data=audio,language='en-GB')
+    eel.DisplayMessage('Recognizing.....')
+    query = r.recognize_google(audio_data=audio,language='en-GB')
     print(f"user said :{query}")
+    eel.DisplayMessage(query)
+    time.sleep(2)
+   
     eel.DisplayMessage(query)
     time.sleep(2)
    
