@@ -5,6 +5,7 @@ import time
 
 
 def speak(text):
+  text = str(text)
   engine = pyttsx3.init()
   voices = engine.getProperty('voices')
   engine.setProperty('voice', voices[1].id)   #changing index, changes voices. 1 for female 2 For male
@@ -15,7 +16,6 @@ def speak(text):
   eel.recieverText(text)
   engine.runAndWait()
 
-@eel.expose
 @eel.expose
 def takeCommand():
   r = sr.Recognizer()
@@ -84,7 +84,9 @@ def allCommands(message=1):
                     
                 whatsApp(contact_no, query, message, name)
     else:
-      print("dont run ")
+      from engine.features import chatBot
+      chatBot(query)
+
         
 
   except :

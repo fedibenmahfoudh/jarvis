@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 import csv
-=======
->>>>>>> 2631f5274412d3d2bba252a17a7e07e588b3c3b9
 import sqlite3
 
 #crete jarvis.db file jus run the command
@@ -18,7 +15,6 @@ conn.commit() """
 query = "CREATE TABLE IF NOT EXISTS web_command(id integer primary key, name VARCHAR(100), url VARCHAR(1000))"
 cursor.execute(query)
 
-<<<<<<< HEAD
 # query = "INSERT INTO web_command VALUES (null,'chat gpt', 'https://chatgpt.com/')"
 # cursor.execute(query)
 # conn.commit()
@@ -57,10 +53,3 @@ cursor.execute('''CREATE TABLE IF NOT EXISTS contacts (id integer primary key, n
 # cursor.execute("SELECT mobile_no FROM contacts WHERE LOWER(name) LIKE ? OR LOWER(name) LIKE ?", ('%' + query + '%', query + '%'))
 # results = cursor.fetchall()
 # print(results[0][0])
-=======
-query = "INSERT INTO web_command VALUES (null,'chat gpt', 'https://chatgpt.com/')"
-cursor.execute(query)
-conn.commit()
-
-
->>>>>>> 2631f5274412d3d2bba252a17a7e07e588b3c3b9

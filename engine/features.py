@@ -8,7 +8,7 @@ import pyautogui
 from engine.command import speak
 from engine.config import *
 from engine.helper import extract_yt_term, remove_words
-#Playing assistant sound function 
+from hugchat import hugchat
 import pywhatkit as kit
 import webbrowser
 import pvporcupine
@@ -170,3 +170,16 @@ def whatsApp(mobile_no, message, flag, name):
 
     pyautogui.hotkey('enter')
     speak(jarvis_message)
+
+
+# chat bot 
+def chatBot(query):
+    user_input = query.lower()
+    chatbot = hugchat.ChatBot(cookie_path="engine\cookies.json")
+    id = chatbot.new_conversation()
+    chatbot.change_conversation(id)
+    response =  chatbot.chat(user_input)
+    print(response)
+    speak(response)
+    return response
+

@@ -7,7 +7,6 @@ def extract_yt_term(command):
     match=re.search(pattern,command,re.IGNORECASE)
     #if a match was found return the exact same name of the song ,otherwise return none 
     return match.group(1) if match else None
-<<<<<<< HEAD
 
 def remove_words(input_string, words_to_remove):
     # Split the input string into words
@@ -28,5 +27,3 @@ words_to_remove = ['make', 'a', 'to', 'phone', 'call', 'send', 'message', 'wahts
 
 result = remove_words(input_string, words_to_remove)
 print(result)
-=======
->>>>>>> 2631f5274412d3d2bba252a17a7e07e588b3c3b9
